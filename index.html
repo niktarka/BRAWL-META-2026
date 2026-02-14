@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BRAWL CALIBRATOR 2026 | SKILL CHECK</title>
+    <title>BRAWL CALIBRATOR 2026 | SKILL CHECK (PRO)</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;500;700&display=swap" rel="stylesheet">
@@ -36,12 +36,7 @@
             overflow-x: hidden;
         }
 
-        .container {
-            width: 100%;
-            max-width: 600px;
-            padding: 20px;
-            perspective: 1000px;
-        }
+        .container { width: 100%; max-width: 600px; padding: 20px; perspective: 1000px; }
 
         .card {
             background: var(--glass);
@@ -74,13 +69,7 @@
             transition: 0.3s;
             clip-path: polygon(10% 0, 100% 0, 100% 70%, 90% 100%, 0 100%, 0 30%);
         }
-
-        .btn:hover:not(:disabled) {
-            background: var(--neon-cyan);
-            color: var(--bg-dark);
-            box-shadow: 0 0 20px var(--neon-cyan);
-        }
-
+        .btn:hover:not(:disabled) { background: var(--neon-cyan); color: var(--bg-dark); box-shadow: 0 0 20px var(--neon-cyan); }
         .btn:disabled { border-color: var(--text-muted); color: var(--text-muted); cursor: not-allowed; }
 
         .input-group { position: relative; margin-bottom: 20px; }
@@ -95,53 +84,24 @@
             border-radius: 8px;
             transition: 0.3s;
         }
-
-        .brawl-input:focus {
-            outline: none;
-            border-color: var(--neon-cyan);
-            box-shadow: 0 0 10px rgba(0, 243, 255, 0.2);
-        }
-
-        .brawl-input.locked {
-            border-color: var(--neon-gold);
-            color: var(--neon-gold);
-            background: rgba(255, 215, 0, 0.05);
-            pointer-events: none;
-        }
+        .brawl-input:focus { outline: none; border-color: var(--neon-cyan); box-shadow: 0 0 10px rgba(0, 243, 255, 0.2); }
+        .brawl-input.locked { border-color: var(--neon-gold); color: var(--neon-gold); background: rgba(255, 215, 0, 0.05); pointer-events: none; }
 
         .edit-icon {
-            position: absolute;
-            right: 15px;
-            top: 50%;
-            transform: translateY(-50%);
-            cursor: pointer;
-            color: var(--neon-gold);
-            display: none;
+            position: absolute; right: 15px; top: 50%; transform: translateY(-50%);
+            cursor: pointer; color: var(--neon-gold); display: none;
         }
 
         .search-results {
-            position: absolute;
-            top: 100%;
-            left: 0;
-            width: 100%;
-            background: #0a0a0f;
-            border: 1px solid var(--glass-border);
-            z-index: 100;
-            max-height: 200px;
-            overflow-y: auto;
-            display: none;
+            position: absolute; top: 100%; left: 0; width: 100%;
+            background: #0a0a0f; border: 1px solid var(--glass-border);
+            z-index: 100; max-height: 200px; overflow-y: auto; display: none;
         }
 
-        .search-item {
-            padding: 12px;
-            display: flex;
-            justify-content: space-between;
-            border-bottom: 1px solid rgba(255,255,255,0.05);
-            cursor: pointer;
-            transition: 0.2s;
-        }
-
+        .search-item { padding: 12px; display: flex; justify-content: space-between;
+            border-bottom: 1px solid rgba(255,255,255,0.05); cursor: pointer; transition: 0.2s; }
         .search-item:hover { background: rgba(0, 243, 255, 0.1); color: var(--neon-cyan); }
+
         .diff-badge { font-size: 0.8rem; padding: 2px 6px; border-radius: 4px; font-weight: bold; }
         .diff-high { color: var(--neon-gold); border: 1px solid var(--neon-gold); }
         .diff-mid { color: var(--neon-cyan); border: 1px solid var(--neon-cyan); }
@@ -152,41 +112,16 @@
 
         select.brawl-input { appearance: none; cursor: pointer; }
         
-        .roster-grid {
-            display: grid;
-            gap: 10px;
-            max-height: 300px;
-            overflow-y: auto;
-            padding-right: 5px;
-        }
-
+        .roster-grid { display: grid; gap: 10px; max-height: 300px; overflow-y: auto; padding-right: 5px; }
         .roster-row { display: flex; gap: 10px; align-items: center; }
-        .roster-num { color: var(--text-muted); font-family: 'Orbitron'; width: 20px; }
+        .roster-num { color: var(--text-muted); font-family: 'Orbitron'; width: 32px; }
 
         .verdict-box { text-align: center; }
-        .score-display {
-            font-size: 6rem;
-            font-family: 'Orbitron';
-            font-weight: 900;
-            line-height: 1;
-            margin: 20px 0;
-        }
+        .score-display { font-size: 6rem; font-family: 'Orbitron'; font-weight: 900; line-height: 1; margin: 20px 0; }
         .verdict-text { font-size: 1.5rem; margin-bottom: 20px; font-weight: bold; }
-        .advice-box {
-            background: rgba(255,255,255,0.05);
-            padding: 20px;
-            border-left: 4px solid var(--neon-cyan);
-            text-align: left;
-            margin-top: 20px;
-        }
+        .advice-box { background: rgba(255,255,255,0.05); padding: 20px; border-left: 4px solid var(--neon-cyan); text-align: left; margin-top: 20px; }
 
-        .hint {
-            margin-top: 15px;
-            font-size: 0.85rem;
-            color: var(--text-muted);
-            border-left: 2px solid var(--neon-red);
-            padding-left: 10px;
-        }
+        .hint { margin-top: 15px; font-size: 0.85rem; color: var(--text-muted); border-left: 2px solid var(--neon-red); padding-left: 10px; }
 
         ::-webkit-scrollbar { width: 5px; }
         ::-webkit-scrollbar-track { background: #050507; }
@@ -198,8 +133,9 @@
 <div class="container">
     <div class="card">
         <h1>Brawl Meta 2026</h1>
-        <p class="subtitle">Skill Calibration System v.3.1 [AUDIO ENABLED]</p>
+        <p class="subtitle">Skill Calibration System v.3.2 PRO [AUDIO ENABLED]</p>
 
+        <!-- SCREEN 1 -->
         <div id="screen-main" class="screen active">
             <h2>01 // IDENTIFICATION</h2>
             <p style="margin-bottom: 20px; color: var(--text-muted);">Система определит 40% твоего рейтинга по этому выбору.</p>
@@ -207,7 +143,7 @@
             <label>КТО ТВОЙ МЕЙН (ЛУЧШИЙ БОЕЦ)?</label>
             <div class="input-group">
                 <input type="text" id="main-input" class="brawl-input" placeholder="Начни вводить имя..." autocomplete="off">
-                <span class="edit-icon" id="main-edit" onclick="resetMain()">✏️</span>
+                <span class="edit-icon" id="main-edit" title="Изменить мейна" onclick="resetMain()">✏️</span>
                 <div class="search-results" id="main-results"></div>
             </div>
             
@@ -218,25 +154,33 @@
             <button class="btn" id="btn-to-roster" disabled onclick="nextScreen('screen-main', 'screen-roster')">ДАЛЕЕ</button>
         </div>
 
+        <!-- SCREEN 2 -->
         <div id="screen-roster" class="screen">
             <h2>02 // ELITE ROSTER</h2>
-            <p style="margin-bottom: 20px; color: var(--text-muted);">Введи бойцов с 1000+ кубками (Rank 30+). Минимум 1.</p>
-            
-            <div class="roster-grid" id="roster-container">
-                </div>
+            <p style="margin-bottom: 12px; color: var(--text-muted);">Введи бойцов с 1000+ кубками (Rank 30+). Минимум 1.</p>
+
+            <!-- NEW: чекбокс «все 99 на максе» -->
+            <div class="input-group" style="margin-bottom: 12px; display:flex; align-items:center; gap:10px;">
+                <input type="checkbox" id="all-max-toggle" style="width:18px; height:18px; cursor:pointer;">
+                <label for="all-max-toggle" style="cursor:pointer; color: var(--text-main);">У меня все 99 бойцов на макс ранге (1000+)</label>
+            </div>
+
+            <div class="roster-grid" id="roster-container"></div>
 
             <div class="hint">
-                Система считает <strong>среднюю сложность</strong> только введенных бойцов.
+                Система считает <strong>среднюю сложность</strong> только введенных бойцов. Дубликаты не засчитываются.
             </div>
 
             <button class="btn" id="btn-to-audit" disabled onclick="nextScreen('screen-roster', 'screen-audit')">ДАЛЕЕ</button>
         </div>
 
+        <!-- SCREEN 3 -->
         <div id="screen-audit" class="screen">
-            <h2>03 // TACTICAL AUDIT</h2>
+            <h2>03 // TACTICAL AUDIT (PRO)</h2>
             <p style="margin-bottom: 20px; color: var(--text-muted);">Отвечай честно. Детектор лжи включен.</p>
 
             <div style="display: flex; flex-direction: column; gap: 15px;">
+                <!-- БАЗОВЫЕ -->
                 <select id="q1" class="brawl-input">
                     <option value="" disabled selected>Тип прицеливания</option>
                     <option value="0">Full Auto-Aim (Я жму красную кнопку)</option>
@@ -273,17 +217,82 @@
                     <option value="3">100ms+ (Лагает, но я привык)</option>
                 </select>
                 
-                 <select id="q6" class="brawl-input">
+                <select id="q6" class="brawl-input">
                     <option value="" disabled selected>Участие в турнирах</option>
                     <option value="0">Только ладдер</option>
                     <option value="5">Местные скримы в Discord</option>
                     <option value="10">Monthly Finals / Pro Play</option>
+                </select>
+
+                <!-- ДОП. ТОЧНЫЕ -->
+                <select id="q7" class="brawl-input">
+                    <option value="" disabled selected>Знание карт и таймингов (брейки, кусты, углы)</option>
+                    <option value="2">Путаюсь в макете карт</option>
+                    <option value="6">Знаю споты, иногда ошибаюсь</option>
+                    <option value="10">Читаю карты и тайминги на автомате</option>
+                </select>
+
+                <select id="q8" class="brawl-input">
+                    <option value="" disabled selected>Гибкость по режимам (Bounty/Heist/Hot Zone/Gem/BR)</option>
+                    <option value="2">Играю 1-2 режима</option>
+                    <option value="6">Комфортно в 3-4 режимах</option>
+                    <option value="10">Уверенно во всех режимах</option>
+                </select>
+
+                <select id="q9" class="brawl-input">
+                    <option value="" disabled selected>Драфт и пики (понимание меты/синергий)</option>
+                    <option value="2">Беру любимых</option>
+                    <option value="6">Учитываю карты/противников</option>
+                    <option value="10">Системно выигрываю драфт</option>
+                </select>
+
+                <select id="q10" class="brawl-input">
+                    <option value="" disabled selected>Контр-пики (знание матчапов)</option>
+                    <option value="2">Не различаю матчапы</option>
+                    <option value="6">Знаю ключевые контры</option>
+                    <option value="10">Тонко эксплуатирую слабости соперника</option>
+                </select>
+
+                <select id="q11" class="brawl-input">
+                    <option value="" disabled selected>Командная комм-ция (коллы, ротации)</option>
+                    <option value="2">Играю соло</option>
+                    <option value="6">Иногда коллю</option>
+                    <option value="10">Четкий шотколл/синхрон</option>
+                </select>
+
+                <select id="q12" class="brawl-input">
+                    <option value="" disabled selected>Фокус на цели режима (гемы, сейф, точки)</option>
+                    <option value="2">Гоняюсь за киллами</option>
+                    <option value="6">Иногда теряю фокус</option>
+                    <option value="10">Всегда играю по цели</option>
+                </select>
+
+                <select id="q13" class="brawl-input">
+                    <option value="" disabled selected>Точность стрельбы (самооценка)</option>
+                    <option value="2">&lt;40%</option>
+                    <option value="6">40-60%</option>
+                    <option value="10">60%+</option>
+                </select>
+
+                <select id="q14" class="brawl-input">
+                    <option value="" disabled selected>Трекинг боеприпасов соперника</option>
+                    <option value="2">Не отслеживаю</option>
+                    <option value="6">Иногда слежу</option>
+                    <option value="10">Держу в голове всегда</option>
+                </select>
+
+                <select id="q15" class="brawl-input">
+                    <option value="" disabled selected>Экономика ульты (коплю/трачу по плану)</option>
+                    <option value="2">Жму как появится</option>
+                    <option value="6">Иногда держу под момент</option>
+                    <option value="10">Ульта — ресурс под задачу</option>
                 </select>
             </div>
 
             <button class="btn" onclick="calculateResult()">ПОЛУЧИТЬ ВЕРДИКТ</button>
         </div>
 
+        <!-- SCREEN 4 -->
         <div id="screen-result" class="screen">
             <div class="verdict-box">
                 <h2 style="color: var(--neon-gold)">ITOG SYSTEM VERDICT</h2>
@@ -291,8 +300,7 @@
                 <div class="verdict-text" id="verdict-title">ANALYZING...</div>
             </div>
             
-            <div class="advice-box" id="advice-text">
-                </div>
+            <div class="advice-box" id="advice-text"></div>
             
             <button class="btn" onclick="location.reload()">ПЕРЕКАЛИБРОВКА</button>
         </div>
@@ -301,85 +309,59 @@
 </div>
 
 <script>
-    // --- 0. AUDIO ENGINE (PURE JS SYNTH) ---
+    // --- 0. AUDIO ENGINE ---
     const AudioFX = {
         ctx: null,
         init: function() {
-            if (!this.ctx) {
-                this.ctx = new (window.AudioContext || window.webkitAudioContext)();
-            }
-            if (this.ctx.state === 'suspended') {
-                this.ctx.resume();
-            }
+            if (!this.ctx) this.ctx = new (window.AudioContext || window.webkitAudioContext)();
+            if (this.ctx.state === 'suspended') this.ctx.resume();
         },
         play: function(type) {
             if (!this.ctx) return;
             const osc = this.ctx.createOscillator();
             const gain = this.ctx.createGain();
-            osc.connect(gain);
-            gain.connect(this.ctx.destination);
-
+            osc.connect(gain); gain.connect(this.ctx.destination);
             const now = this.ctx.currentTime;
-            
             if (type === 'hover') {
-                osc.type = 'sine';
-                osc.frequency.setValueAtTime(400, now);
+                osc.type = 'sine'; osc.frequency.setValueAtTime(400, now);
                 osc.frequency.exponentialRampToValueAtTime(800, now + 0.05);
-                gain.gain.setValueAtTime(0.05, now);
-                gain.gain.exponentialRampToValueAtTime(0.001, now + 0.05);
-                osc.start(now);
-                osc.stop(now + 0.05);
-            } 
-            else if (type === 'click') {
-                osc.type = 'triangle';
-                osc.frequency.setValueAtTime(200, now);
+                gain.gain.setValueAtTime(0.05, now); gain.gain.exponentialRampToValueAtTime(0.001, now + 0.05);
+                osc.start(now); osc.stop(now + 0.05);
+            } else if (type === 'click') {
+                osc.type = 'triangle'; osc.frequency.setValueAtTime(200, now);
                 osc.frequency.linearRampToValueAtTime(50, now + 0.1);
-                gain.gain.setValueAtTime(0.1, now);
-                gain.gain.exponentialRampToValueAtTime(0.001, now + 0.1);
-                osc.start(now);
-                osc.stop(now + 0.1);
-            }
-            else if (type === 'select') {
-                osc.type = 'square';
-                osc.frequency.setValueAtTime(600, now);
+                gain.gain.setValueAtTime(0.1, now); gain.gain.exponentialRampToValueAtTime(0.001, now + 0.1);
+                osc.start(now); osc.stop(now + 0.1);
+            } else if (type === 'select') {
+                osc.type = 'square'; osc.frequency.setValueAtTime(600, now);
                 osc.frequency.exponentialRampToValueAtTime(1200, now + 0.1);
-                gain.gain.setValueAtTime(0.05, now);
-                gain.gain.exponentialRampToValueAtTime(0.001, now + 0.1);
-                osc.start(now);
-                osc.stop(now + 0.1);
-            }
-            else if (type === 'success') {
-                // Simple Arpeggio
-                this.playNote(440, now);
-                this.playNote(554, now + 0.1);
-                this.playNote(659, now + 0.2);
+                gain.gain.setValueAtTime(0.05, now); gain.gain.exponentialRampToValueAtTime(0.001, now + 0.1);
+                osc.start(now); osc.stop(now + 0.1);
+            } else if (type === 'success') {
+                this.playNote(440, now); this.playNote(554, now + 0.1); this.playNote(659, now + 0.2);
             }
         },
         playNote: function(freq, time) {
-            const osc = this.ctx.createOscillator();
-            const gain = this.ctx.createGain();
-            osc.connect(gain);
-            gain.connect(this.ctx.destination);
-            
-            osc.type = 'sine';
-            osc.frequency.setValueAtTime(freq, time);
-            gain.gain.setValueAtTime(0.1, time);
-            gain.gain.exponentialRampToValueAtTime(0.001, time + 0.3);
-            osc.start(time);
-            osc.stop(time + 0.3);
+            const osc = this.ctx.createOscillator(); const gain = this.ctx.createGain();
+            osc.connect(gain); gain.connect(this.ctx.destination);
+            osc.type = 'sine'; osc.frequency.setValueAtTime(freq, time);
+            gain.gain.setValueAtTime(0.1, time); gain.gain.exponentialRampToValueAtTime(0.001, time + 0.3);
+            osc.start(time); osc.stop(time + 0.3);
         }
     };
-
-    // Initialize Audio on first interaction
     document.addEventListener('click', () => AudioFX.init(), { once: true });
-    
-    // Add audio to buttons and inputs
-    document.querySelectorAll('button, input, select').forEach(el => {
-        el.addEventListener('mouseenter', () => AudioFX.play('hover'));
-        el.addEventListener('click', () => AudioFX.play('click'));
-    });
+    function wireAudioToInputs(){
+      document.querySelectorAll('button, input, select').forEach(el => {
+        if (!el.dataset._audio) {
+          el.addEventListener('mouseenter', () => AudioFX.play('hover'));
+          el.addEventListener('click', () => AudioFX.play('click'));
+          el.dataset._audio = '1';
+        }
+      });
+    }
+    wireAudioToInputs();
 
-    // --- 1. FULL DATA DATABASE (EXPANDED) ---
+    // --- 1. DB ---
     const brawlers = [
         // LEGENDARY
         {name: "Leon", diff: 6, tier: "MID"},
@@ -396,7 +378,6 @@
         {name: "Kenji", diff: 7, tier: "MID"},
         {name: "Pierce", diff: 5, tier: "MID"},
         {name: "Kaze", diff: 8, tier: "MID"},
-        
         // MYTHIC
         {name: "Mortis", diff: 7, tier: "MID"},
         {name: "Tara", diff: 6, tier: "MID"},
@@ -435,7 +416,6 @@
         {name: "Fang", diff: 3, tier: "LOW"},
         {name: "Buzz", diff: 3, tier: "LOW"},
         {name: "Glowbert", diff: 2, tier: "LOW"},
-
         // EPIC
         {name: "Piper", diff: 7, tier: "MID"},
         {name: "Pam", diff: 5, tier: "MID"},
@@ -465,7 +445,6 @@
         {name: "Bo", diff: 5, tier: "MID"},
         {name: "Stu", diff: 6, tier: "MID"},
         {name: "Meeple", diff: 6, tier: "MID"},
-
         // SUPER RARE
         {name: "Rico", diff: 8, tier: "MID"},
         {name: "Darryl", diff: 5, tier: "MID"},
@@ -476,7 +455,6 @@
         {name: "Dynamike", diff: 9, tier: "HARD"},
         {name: "Tick", diff: 2, tier: "LOW"},
         {name: "8-Bit", diff: 5, tier: "MID"},
-
         // RARE
         {name: "El Primo", diff: 3, tier: "LOW"},
         {name: "Barley", diff: 6, tier: "MID"},
@@ -486,40 +464,46 @@
         {name: "Brock", diff: 6, tier: "MID"},
         {name: "Nita", diff: 3, tier: "LOW"},
         {name: "Colt", diff: 7, tier: "MID"},
-
         // STARTING
         {name: "Shelly", diff: 2, tier: "LOW"},
         {name: "Jessie", diff: 4, tier: "MID"},
-        
-        // FUTURE 2026 (Flavor)
+        // FUTURE (flavor)
         {name: "Vortex", diff: 8, tier: "MID"},
         {name: "R-T 2.0", diff: 7, tier: "MID"},
         {name: "Shadow", diff: 9, tier: "HARD"}
     ].sort((a, b) => a.name.localeCompare(b.name));
 
-    // --- 2. STATE ---
-    let state = {
-        mainBrawler: null,
-        roster: [],
-        audit: {}
+    // Archetypes for subtle audit weight
+    const archetypes = {
+      sharpshooter: ["Colt","Bea","Piper","Brock","Belle","Mandy","Nani"],
+      assassin: ["Mortis","Edgar","Fang","Buzz"],
+      thrower: ["Dynamike","Barley","Grom","Sprout"],
+      control: ["Sandy","Lou","Gale","Janet","Otis","Ruffs"],
+      tank: ["Bull","El Primo","Frank","Jacky"],
+      support: ["Poco","Pam","Byron","Gene"],
+      gadgeteer: ["Gray","Max","Colette","Stu"]
     };
+    const getArchetype = (name) => Object.entries(archetypes).find(([,list]) => list.includes(name))?.[0] || 'general';
 
-    // --- 3. DOM ELEMENTS & UTILS ---
+    // --- 2. STATE ---
+    let state = { mainBrawler: null, roster: [], audit: {} };
+
+    // --- 3. DOM UTILS ---
     const getEl = (id) => document.getElementById(id);
 
     function nextScreen(currentId, nextId) {
+        if(nextId === 'screen-roster' && !state.mainBrawler){ alert('Сначала выбери мейна.'); return; }
+        if(nextId === 'screen-audit' && state.roster.length === 0){ alert('Добавь хотя бы одного бойца в ростер 1000+.'); return; }
         AudioFX.play('click');
         getEl(currentId).classList.remove('active');
         setTimeout(() => {
             getEl(currentId).style.display = 'none';
             getEl(nextId).style.display = 'block';
-            setTimeout(() => {
-                getEl(nextId).classList.add('active');
-            }, 50);
+            setTimeout(() => { getEl(nextId).classList.add('active'); wireAudioToInputs(); }, 50);
         }, 500);
     }
 
-    // --- 4. SEARCH LOGIC (SCREEN 1) ---
+    // --- 4. SEARCH (SCREEN 1) ---
     const mainInput = getEl('main-input');
     const mainResults = getEl('main-results');
     const btnToRoster = getEl('btn-to-roster');
@@ -529,21 +513,14 @@
 
     function handleSearch(query, resultBox, callback) {
         resultBox.innerHTML = '';
-        if (query.length < 1) {
-            resultBox.style.display = 'none';
-            return;
-        }
-
+        if (query.length < 1) { resultBox.style.display = 'none'; return; }
         const matches = brawlers.filter(b => b.name.toLowerCase().startsWith(query.toLowerCase()));
-        
         if (matches.length > 0) {
             resultBox.style.display = 'block';
             matches.forEach(b => {
                 const div = document.createElement('div');
                 div.className = 'search-item';
-                
-                let diffClass = b.diff >= 9 ? 'diff-high' : (b.diff <= 3 ? 'diff-low' : 'diff-mid');
-                
+                const diffClass = b.diff >= 9 ? 'diff-high' : (b.diff <= 3 ? 'diff-low' : 'diff-mid');
                 div.innerHTML = `<span>${b.name}</span> <span class="diff-badge ${diffClass}">${b.diff}/10</span>`;
                 div.onclick = () => { AudioFX.play('select'); callback(b); };
                 div.onmouseenter = () => AudioFX.play('hover');
@@ -574,16 +551,17 @@
         mainInput.focus();
     }
 
-    // --- 5. ROSTER LOGIC (SCREEN 2) ---
+    // --- 5. ROSTER (SCREEN 2) ---
     const rosterContainer = getEl('roster-container');
     const btnToAudit = getEl('btn-to-audit');
+    const allMaxToggle = getEl('all-max-toggle');
 
-    // Init 10 rows
-    for (let i = 0; i < 10; i++) {
+    // Build 99 rows
+    for (let i = 0; i < 99; i++) {
         const row = document.createElement('div');
         row.className = 'roster-row';
         row.innerHTML = `
-            <span class="roster-num">${i+1}.</span>
+            <span class="roster-num">${(i+1).toString().padStart(2,'0')}.</span>
             <div class="input-group" style="width: 100%; margin:0;">
                 <input type="text" class="brawl-input roster-field" placeholder="Имя бойца..." id="roster-${i}" autocomplete="off">
                 <div class="search-results" id="roster-results-${i}"></div>
@@ -595,7 +573,6 @@
         const results = document.getElementById(`roster-results-${i}`);
 
         input.addEventListener('input', (e) => handleSearch(e.target.value, results, (b) => selectRoster(b, input, results, i)));
-        
         input.addEventListener('focus', () => {
             if(input.classList.contains('locked')) {
                 input.value = '';
@@ -606,114 +583,236 @@
             }
         });
     }
+    wireAudioToInputs();
 
     function selectRoster(brawler, input, results, index) {
+        if (state.roster.some(r => r.data.name === brawler.name)) {
+            alert('Этот боец уже есть в ростере. Дубликаты не засчитываются.');
+            return;
+        }
         input.value = brawler.name;
         input.classList.add('locked');
         input.setAttribute('readonly', true);
         results.style.display = 'none';
-        
         state.roster = state.roster.filter(item => item.index !== index);
         state.roster.push({ index: index, data: brawler });
-        
         validateRoster();
     }
 
-    function validateRoster() {
-        btnToAudit.disabled = state.roster.length === 0;
+    function validateRoster() { btnToAudit.disabled = state.roster.length === 0; }
+
+    // NEW: Fill/Clear all 99 with database
+    allMaxToggle.addEventListener('change', () => {
+        if (allMaxToggle.checked) {
+            fillAllMax();
+        } else {
+            clearAllRoster();
+        }
+    });
+
+    function fillAllMax() {
+        // clear current
+        clearAllRoster(false);
+        // take first 99 (или меньше, если в базе меньше)
+        const count = Math.min(99, brawlers.length);
+        for (let i = 0; i < 99; i++) {
+            const input = document.getElementById(`roster-${i}`);
+            const results = document.getElementById(`roster-results-${i}`);
+            const b = i < count ? brawlers[i] : null;
+            if (b) {
+                input.value = b.name;
+                input.classList.add('locked');
+                input.setAttribute('readonly', true);
+                if (results) results.style.display = 'none';
+                state.roster = state.roster.filter(item => item.index !== i);
+                state.roster.push({ index: i, data: b });
+            } else {
+                input.value = '';
+                input.classList.remove('locked');
+                input.removeAttribute('readonly');
+                state.roster = state.roster.filter(item => item.index !== i);
+            }
+        }
+        validateRoster();
     }
 
-    // --- 6. CALCULATION & AUDIT (SCREEN 3 & 4) ---
-    
+    function clearAllRoster(resetToggle = true) {
+        for (let i = 0; i < 99; i++) {
+            const input = document.getElementById(`roster-${i}`);
+            if (!input) continue;
+            input.value = '';
+            input.classList.remove('locked');
+            input.removeAttribute('readonly');
+        }
+        state.roster = [];
+        validateRoster();
+        if (resetToggle) allMaxToggle.checked = false;
+    }
+
+    // --- 6. CALCULATION & TIPS ---
+    const generalTips = [
+      'Следи за циклами спавна врагов: тайм коллов даёт +1-2 бесплатных килла на ротации.',
+      'Не отдавай ульту в воздух: планируй трейды под ключевые секунды режима (40s/20s/OT).',
+      'Меняй высоту позиции: диагонали и углы сокращают время нахождения в простреле.',
+      'Никогда не пикай открыто против дальников — сыграй от укрытия и дождись окна перезарядки.',
+      'Контроль кустов важнее лишнего урона: дизарм инфы ломает весь плей врага.',
+      'Колл бейта ульты соперника: выманил — сразу пропушь другой фланг.',
+      'Отслеживай гаджеты соперника: после 3/3 он сильно слабее — меняй темп.',
+      'В Heist ценится не K/D, а урон по сейфу. Планируй роуты с двойным давлением.',
+      'В Bounty избегай соло-инициаций при отрыве по звёздам — играй от сейва преимущества.',
+      'В Gem Grab при 7+ гемах играй от контроля центра и сейва кэрриера, а не от киллов.',
+      'В Hot Zone не стой «на точке» без нужды — играй от краёв зоны, режь подходы.',
+      'Учись «перестреливать» по таймингу перезарядки — выходи ровно в окно пустых патронов.',
+      'Не форси пуш, если тиммейт ресается через 2-3 секунды — дождись синхрона.',
+      'Подбирай старпауэры и геры под карту, а не под привычку — это бесплатные проценты винрейта.',
+      'Смещай прицел чуть вперёд от модели — предикты дают разницу в ранних дуэлях.',
+      'Против прыжковых ассасинов держи дистанцию «полтора тайла + угол» — ломает им вход.',
+      'Учись проигрывать правильно: выходи из плохих трейдов с минимальными потерями и инфой.',
+      'Записывай собственные демки и отмечай 3 момента: плохой пик, плохой тайминг, плохая позиция.',
+      'Темп‑менеджмент: откатывай гаджеты и ульту под ключевые замесы вместо мелких трейдов.',
+      'Никогда не пушь по центральной линии без контроля боковых кустов — тебя расфокусируют.'
+    ];
+    const specificTips = {
+      'Colt': [
+        'Тренируй «степ‑шоты»: короткий шаг в сторону перед выстрелом повышает точность очереди.',
+        'Ломай ключевые стены только под момент: открывай углы для команды, а не для врага.',
+        'Комбинируй гаджет «Silver Bullet» с ультой для мгновенного открытия прохода.'
+      ],
+      'Mortis': [
+        'Не инициируй первым: жди выстрела врага, входи на пустые патроны и выходи по диагонали.',
+        'Считай «тройной дэш»: два на вход — один на выход. Не трать все три на вход.'
+      ],
+      'Dynamike': [
+        'Контролируй зону двойными взрывами: кидай вторую бочку туда, куда противник убежит из первой.',
+        'Используй стенки как «банки» для рикошетов, закрывая линии отхода.'
+      ],
+      'Piper': [
+        'Не стой на одной высоте: варьируй дистанцию, чтобы ломать предикт сопернику.',
+        'Гаджет «Auto Aimer» держи под прыжки ассасинов — это твой анти‑дайв.'
+      ],
+      'Nani': [
+        'Сейв ульту под аутплей: угловой взрыв «Peep» добивает кэрриера гемов сквозь укрытия.'
+      ],
+      'General': [
+        'Не разменяйся 1‑в‑1 без цели: выгодны лишь киллы, дающие контроль карты или объекта.'
+      ]
+    };
+    const pickDistinct = (arr, k) => {
+      const copy = arr.slice(); const out = [];
+      while(copy.length && out.length < k){ out.push(copy.splice(Math.floor(Math.random()*copy.length),1)[0]); }
+      return out;
+    };
+    function tipsForBrawler(name){
+      const spec = specificTips[name] || [];
+      const fromSpec = pickDistinct(spec, Math.min(2, spec.length));
+      const fromGen = pickDistinct(generalTips, 3);
+      return [...fromSpec, ...fromGen];
+    }
+
+    function computeAudit(){
+      const selects = Array.from(document.querySelectorAll('#screen-audit select.brawl-input'));
+      const values = selects.map(s => parseInt(s.value) || 0);
+      const auditRaw = values.reduce((a,b)=>a+b,0);
+      const auditMax = selects.reduce((sum, s)=>{
+        const max = Math.max(...Array.from(s.options).map(o => parseInt(o.value) || 0));
+        return sum + max;
+      }, 0);
+      let norm = auditMax ? (auditRaw / auditMax) * 10 : 0; // 0..10
+
+      // Аркетипная тонкая поправка (±10% максимум)
+      if(state.mainBrawler){
+        const arche = getArchetype(state.mainBrawler.name);
+        const v = {
+          aim: parseInt(getEl('q13').value) || 0,
+          ammo: parseInt(getEl('q14').value) || 0,
+          ult: parseInt(getEl('q15').value) || 0,
+          draft: parseInt(getEl('q9').value) || 0,
+          obj: parseInt(getEl('q12').value) || 0,
+          map: parseInt(getEl('q7').value) || 0,
+          comm: parseInt(getEl('q11').value) || 0
+        };
+        let bias = 1.0;
+        if(arche === 'sharpshooter') bias += ((v.aim + v.ammo) / 20) * 0.1;
+        else if(arche === 'assassin') bias += ((v.ammo + v.ult) / 20) * 0.08;
+        else if(arche === 'thrower') bias += (v.map / 10) * 0.08;
+        else if(arche === 'control') bias += (v.obj / 10) * 0.08;
+        else if(arche === 'support') bias += (v.comm / 10) * 0.08;
+        bias = Math.max(0.9, Math.min(1.1, bias));
+        norm = Math.max(0, Math.min(10, norm * bias));
+      }
+      return { norm };
+    }
+
     function calculateResult() {
+        if(!state.mainBrawler){ alert('Мейн не выбран. Вернись и выбери главного бойца.'); return; }
+        if(state.roster.length === 0){ alert('Ростер пуст. Добавь хотя бы одного бойца 1000+.'); return; }
         AudioFX.play('success');
 
-        // Gather Audit Data
-        const q1 = parseInt(getEl('q1').value) || 0;
-        const q2 = parseInt(getEl('q2').value) || 0;
-        const q3 = parseInt(getEl('q3').value) || 0;
-        const q4 = parseInt(getEl('q4').value) || 0;
-        const q5 = parseInt(getEl('q5').value) || 0;
-        const q6 = parseInt(getEl('q6').value) || 0;
-        
-        // --- FORMULA 2026 ---
-        
-        // 1. Main Score (40%)
+        // 1. Main 40%
         let mainScore = state.mainBrawler.diff; 
-        
-        // 2. Roster Score (30%)
-        let rosterSum = 0;
-        state.roster.forEach(r => rosterSum += r.data.diff);
+        // 2. Roster 30%
+        let rosterSum = 0; state.roster.forEach(r => rosterSum += r.data.diff);
         let rosterAvg = state.roster.length > 0 ? (rosterSum / state.roster.length) : 0;
-        
-        // 3. Audit Score (30%)
-        let auditRaw = q1 + q2 + q3 + q4 + q5 + q6;
-        let auditMax = 59; 
-        let auditNorm = (auditRaw / auditMax) * 10;
+        // 3. Audit 30%
+        const { norm: auditNorm } = computeAudit();
 
-        // Weighted Calculation
         let finalRating = (mainScore * 0.4) + (rosterAvg * 0.3) + (auditNorm * 0.3);
-        
-        // --- PENALTY CHECK ---
         let penaltyApplied = false;
-        if (state.mainBrawler.diff <= 3) {
-            finalRating = finalRating * 0.5; // BRAINDEAD PENALTY
-            penaltyApplied = true;
-        }
-
-        finalRating = finalRating.toFixed(1);
-
-        // Show Result
+        if (state.mainBrawler.diff <= 3) { finalRating *= 0.5; penaltyApplied = true; }
+        finalRating = Math.max(0, Math.min(10, finalRating));
+        renderVerdict(finalRating.toFixed(1), penaltyApplied);
         nextScreen('screen-audit', 'screen-result');
-        renderVerdict(finalRating, penaltyApplied);
     }
 
     function renderVerdict(score, penalty) {
         const scoreDisplay = getEl('final-score');
         const title = getEl('verdict-title');
         const advice = getEl('advice-text');
-        
-        // Animate Score
-        let current = 0;
+        let current = 0, target = parseFloat(score);
         const interval = setInterval(() => {
-            current += 0.1;
+            current = Math.min(target, current + 0.1);
             scoreDisplay.innerText = current.toFixed(1) + "/10";
-            AudioFX.play('hover'); // Ticking sound during count
-            if (current >= score) {
+            AudioFX.play('hover');
+            if (current >= target) {
                 clearInterval(interval);
                 scoreDisplay.innerText = score + "/10";
-                
-                // Colorize
-                if (score < 4) scoreDisplay.style.color = "var(--neon-red)";
-                else if (score < 7.5) scoreDisplay.style.color = "var(--neon-cyan)";
+                if (target < 4) scoreDisplay.style.color = "var(--neon-red)";
+                else if (target < 7.5) scoreDisplay.style.color = "var(--neon-cyan)";
                 else scoreDisplay.style.color = "var(--neon-gold)";
             }
         }, 20);
 
-        // Text Logic
-        let titleText = "";
-        let bodyText = "";
-
-        if (score >= 8.5) {
+        let titleText = "", bodyText = "";
+        if (target >= 8.5) {
             titleText = "CYBER-SPORT ELITE";
-            bodyText = `<p>Показатели аномальные. Твой мейн <strong>${state.mainBrawler.name}</strong> и ростер подтверждают глубокое понимание механик 2026 года.</p>
-            <p style='margin-top:10px'>Ты идеально чувствуешь микро-моменты. Твое место в Мастерах или на LAN-турнирах. Продолжай абузить <strong>Хэнка и Нани</strong>.</p>`;
-        } else if (score >= 6.0) {
+            bodyText = `<p>Показатели сильные. Твой мейн <strong>${state.mainBrawler.name}</strong> и ростер подтверждают глубокое понимание механик 2026 года.</p>
+            <p style='margin-top:10px'>Ты чувствуешь микро‑моменты. Твое место в высоких лигах и на турнирах. Продолжай отшлифовывать индивидуалку и драфт.</p>`;
+        } else if (target >= 6.0) {
             titleText = "SOLID FIGHTER";
-            bodyText = `<p>Хорошая база, но есть куда расти. Твой пул героев (ср. сложность: ${(state.mainBrawler.diff).toFixed(1)}) достоин уважения, но тактика хромает.</p>
-            <p style='margin-top:10px'><strong>Совет:</strong> Перестань играть на авто-аиме в стрессовых ситуациях. Добавь в пул <strong>Сту или Грея</strong> для тренировки реакции.</p>`;
+            bodyText = `<p>Хорошая база, но есть куда расти. Твой пул героев (ср. сложность: ${(state.mainBrawler.diff).toFixed(1)}) достойный, однако тактика и стабильность могут быть лучше.</p>
+            <p style='margin-top:10px'><strong>Совет:</strong> Уменьши долю авто‑аима в стрессовых моментах и добавь тренировки предиктов.</p>`;
         } else {
             titleText = "SKILL ISSUE DETECTED";
-            bodyText = `<p>Критически низкий уровень скилла. Твой выбор — это спам кнопок бездумно.</p>
-            <p style='margin-top:10px'><strong>ВЕРДИКТ:</strong> Ты фидишь ульту врагам. Удали <strong>${state.mainBrawler.name}</strong>. Иди в тренировочную пещеру и учись попадать за Кольта, пока не набьешь 100% точности.</p>`;
+            bodyText = `<p>Пока не хватает стабильности и системности. Это вопрос тренировки и грамотного пула.</p>
+            <p style='margin-top:10px'><strong>План:</strong> Больше работы над позиционкой, предиктами и целями режима. Технику можно быстро подтянуть.</p>`;
+        }
+        if (penalty) {
+            bodyText += `<p style='margin-top:15px; color: var(--neon-red); border: 1px solid var(--neon-red); padding: 10px;'>⚠ <strong>ШТРАФ АКТИВИРОВАН:</strong> Мейн низкой сложности (${state.mainBrawler.name}). Итоговый рейтинг скорректирован для более точной калибровки.</p>`;
         }
 
-        if (penalty) {
-            bodyText += `<p style='margin-top:15px; color: var(--neon-red); border: 1px solid var(--neon-red); padding: 10px;'>⚠ <strong>ШТРАФ АКТИВИРОВАН:</strong> Ты мейнишь "Braindead" персонажа (${state.mainBrawler.name}). Твой реальный скилл урезан на 50%. Это не хейт, это факты.</p>`;
-        }
+        const tips = tipsForBrawler(state.mainBrawler.name);
+        const weak = [];
+        const wpush = (id, txt) => { if((parseInt(getEl(id).value)||0) <= 5) weak.push(txt); };
+        wpush('q1', 'Чаще тренируй ручное прицеливание на кастом‑картах — это ускоряет прогресс.');
+        wpush('q11', 'Больше коллов: обсуждай ротации и тайминги — командные бои стабилизируются.');
+        wpush('q12', 'Фокусируйся на цели режима: киллы важны только как инструмент.');
+        wpush('q14', 'Следи за боеприпасами соперника — входи в дуэли, когда у него «сухо».');
+        wpush('q15', 'Ульта — ресурс. Держи её под тайминги, а не под эмоции.');
+        const combined = [...tips, ...pickDistinct(weak, 3)];
+        const tipsHtml = combined.map(t => `<li>${t}</li>`).join('');
 
         title.innerText = titleText;
-        advice.innerHTML = bodyText;
+        advice.innerHTML = bodyText + `<ul style="margin-top:12px; padding-left:20px; line-height:1.4;">${tipsHtml}</ul>`;
     }
 </script>
 </body>
